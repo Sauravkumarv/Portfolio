@@ -1,0 +1,15 @@
+@import './styles/custom.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Test styles to verify CSS is loading */
+body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.test-red {
+  background-color: red !important;
+}
