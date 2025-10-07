@@ -26,25 +26,14 @@ const projects = [
 
   },
   {
-    title: "Weather Dashboard",
+    title: "Vectorshift-Pipeline-Builder",
     description:
-      "A responsive web application developed with HTML, CSS, and JavaScript, leveraging the OpenWeatherMap API to fetch real-time weather data. Users can search for any city to instantly view temperature, humidity, wind speed, and current weather conditions, complemented by dynamic, visually intuitive icons for an enhanced user experience.",
-    tech: ["HTML", "CSS", "Javascript", "API"],
-    gradient: "from-green-500 to-teal-500",
-    image: "/images/weather.png",
-    liveUrl: "https://weather-app-ayku-g8x3pok3q-sauravkumarvs-projects.vercel.app/",
-    gitCode:"https://github.com/Sauravkumarv/Weather-App"
-
-  },
-  {
-    title: "Secure Stripe Payment Gateway Integration",
-    description:
-      "Integrated Stripe payment gateway to build a secure and modern payment processing solution using Node.js and Express. Developed an intuitive, responsive interface with interactive success and cancellation pages, ensuring seamless user experience and reliable transaction handling",
-    tech: ["Node.js", "Express.js", "Stripe API", "EJS"],
-    gradient: "from-indigo-500 to-purple-500",
-    image: "/images/stripe.png",
-    liveUrl: "https://stripepayment-pitx.onrender.com/",
-    gitCode:"https://github.com/Sauravkumarv/StripePayment"
+      "VectorShiftBuilder is an interactive frontend application designed to visually create and manage data processing pipelines. Users can drag and drop different types of nodes—such as input sources, outputs, text processors, and LLM modules—to build custom workflows. Each node represents a specific operation or function, allowing users to connect them logically to define data flow. The app focuses on ease of use, visual clarity, and modularity, making complex pipeline construction intuitive without needing backend logic.",
+    tech: ["HTML", "CSS", "React"],
+    gradient: "from-orange-500 to-red-500",
+    image: "/images/Vectorshift-Pipeline-Builder.png",
+    liveUrl: "https://vectorshift-pipeline-builder-387765ew3-sauravkumarvs-projects.vercel.app/",
+    gitCode:"https://github.com/Sauravkumarv/Vectorshift-Pipeline-Builder"
 
   },
   {
@@ -57,7 +46,31 @@ const projects = [
     liveUrl: "https://mern-url-shortner-ar36.vercel.app/",
     gitCode:"https://github.com/Sauravkumarv/springboot-library-crud"
 
+  }
+  ,
+  {
+    title: "Secure Stripe Payment Gateway Integration",
+    description:
+      "Integrated Stripe payment gateway to build a secure and modern payment processing solution using Node.js and Express. Developed an intuitive, responsive interface with interactive success and cancellation pages, ensuring seamless user experience and reliable transaction handling",
+    tech: ["Node.js", "Express.js", "Stripe API", "EJS"],
+    gradient: "from-indigo-500 to-purple-500",
+    image: "/images/stripe.png",
+    liveUrl: "https://stripepayment-pitx.onrender.com/",
+    gitCode:"https://github.com/Sauravkumarv/StripePayment"
+
   },
+  {
+    title: "Weather Dashboard",
+    description:
+      "A responsive web application developed with HTML, CSS, and JavaScript, leveraging the OpenWeatherMap API to fetch real-time weather data. Users can search for any city to instantly view temperature, humidity, wind speed, and current weather conditions, complemented by dynamic, visually intuitive icons for an enhanced user experience.",
+    tech: ["HTML", "CSS", "Javascript", "API"],
+    gradient: "from-green-500 to-teal-500",
+    image: "/images/weather.png",
+    liveUrl: "https://weather-app-ayku-g8x3pok3q-sauravkumarvs-projects.vercel.app/",
+    gitCode:"https://github.com/Sauravkumarv/Weather-App"
+
+  },
+  
   {
     title: "Responsive Tip Calculator",
     description:
@@ -68,7 +81,8 @@ const projects = [
     liveUrl: "https://calculate-tip-ten.vercel.app/",
     gitCode:"https://github.com/Sauravkumarv/calculate_tip"
 
-  }
+  },
+  
 ];
 
 const Projects = () => {
