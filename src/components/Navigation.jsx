@@ -13,49 +13,117 @@ const NAVIGATION_ITEMS = [
 // Memoized components for better performance
 const Logo = memo(function Logo() {
   return (
-    <div className="group cursor-pointer" role="button" tabIndex="0" aria-label="SK Verma Logo">
-      <div className="text-xl md:text-2xl lg:text-3xl font-black relative whitespace-nowrap">
-        {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse ">
-          SK Verma
-        </div>
-        
-        {/* Main text with staggered animation */}
-        <div className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
-          {'SK Verma'.split('').map((letter, index) => (
-            <span 
-              key={index}
-              className={`inline-block transform group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300 ${
-                letter === '' ? 'w-4' : ''
-              }`}
-              style={{
-                transitionDelay: `${index * 50}ms`,
-                textShadow: 'none'
-              }}
-            >
-              {letter === ' ' ? '\u00A0' : letter}
-            </span>
-          ))}
-        </div>
-        
-        {/* Creative underline effect */}
-        <div className="flex space-x-1 mt-1">
-          {[...Array(3)].map((_, i) => (
-            <div 
-              key={i}
-              className="h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-all duration-500"
-              style={{
-                width: i === 1 ? '40px' : '20px',
-                transitionDelay: `${i * 100}ms`
-              }}
-            />
-          ))}
-        </div>
+    <div
+    className="relative group cursor-pointer select-none inline-block"
+    role="button"
+    tabIndex="0"
+    aria-label="SK Verma Logo"
+    style={{ isolation: 'isolate' }}
+  >
+
+
+    {/* Main content - IN FRONT with higher z-index */}
+    <div className="relative font-extrabold tracking-tight" style={{ 
+      fontFamily: "'Orbitron', 'Rajdhani', 'Exo 2', sans-serif",
+      zIndex: 10
+    }}>
+
+      {/* ✨ Shimmer animated gradient text - ALWAYS VISIBLE */}
+      <div 
+        className="relative text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-400 bg-[length:200%_auto] bg-clip-text text-transparent animate-[shine_3s_linear_infinite]"
+        style={{ zIndex: 10 }}
+      >
+        {'SK Verma'.split('').map((letter, index) => (
+          <span
+            key={index}
+            className={`inline-block transition-transform duration-300 ease-out group-hover:scale-125 group-hover:-rotate-6 ${
+              letter === ' ' ? 'w-3' : ''
+            }`}
+            style={{ 
+              transitionDelay: `${index * 60}ms`
+            }}
+          >
+            {letter === ' ' ? '\u00A0' : letter}
+          </span>
+        ))}
+      </div>
+
+      {/* 🌊 Animated underline bars */}
+      <div className="flex mt-2 space-x-2 justify-center relative" style={{ zIndex: 10 }}>
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className="h-1 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"
+            style={{
+              width: i === 1 ? '50px' : '25px',
+              transitionDelay: `${i * 150}ms`,
+            }}
+          />
+        ))}
       </div>
     </div>
-  );
-});
 
+    {/* 🌈 Keyframe for shimmer */}
+    <style>
+      {`
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Rajdhani:wght@700&family=Exo+2:wght@800&display=swap');
+        
+        @keyframes shine {
+          0% { background-position: 0% center; }
+          100% { background-position: 200% center; }
+        }
+      `}
+    </style>
+  </div>
+
+
+
+
+
+
+//     <div className="group cursor-pointer" role="button" tabIndex="0" aria-label="SK Verma Logo">
+//       <div className="text-xl md:text-2xl lg:text-3xl font-black relative whitespace-nowrap">
+//         {/* Animated background gradient */}
+//         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse ">
+//           SK Verma
+//         </div>
+        
+//         {/* Main text with staggered animation */}
+//         <div className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent whitespace-nowrap">
+//           {'SK Verma'.split('').map((letter, index) => (
+//             <span 
+//               key={index}
+//               className={`inline-block transform group-hover:scale-110 group-hover:-rotate-12 transition-all duration-300 ${
+//                 letter === '' ? 'w-4' : ''
+//               }`}
+//               style={{
+//                 transitionDelay: `${index * 50}ms`,
+//                 textShadow: 'none'
+//               }}
+//             >
+//               {letter === ' ' ? '\u00A0' : letter}
+//             </span>
+//           ))}
+//         </div>
+        
+//         {/* Creative underline effect */}
+//         <div className="flex space-x-1 mt-1">
+//           {[...Array(3)].map((_, i) => (
+//             <div 
+//               key={i}
+//               className="h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-all duration-500"
+//               style={{
+//                 width: i === 1 ? '40px' : '20px',
+//                 transitionDelay: `${i * 100}ms`
+//               }}
+//             />
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// });
+ ) })
 const DesktopNavItem = memo(function DesktopNavItem({ item, index, scrollToSection, currentSection }) {
   const { id, label, icon: Icon } = item;
   const isActive = currentSection === id;
