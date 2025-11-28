@@ -5,6 +5,16 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 // projects array component ke bahar define kiya
 const projects = [
   {
+    title: "Frenzy-A_Social_Platform",
+    description:
+      "Frenzy is a full-stack language exchange platform where learners can discover new study partners, exchange friend requests, chat in real-time, and jump into video calls—all powered by Stream's chat and video APIs. The project ships with an Express/MongoDB backend and a Vite/React frontend styled with Tailwind + DaisyUI.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Stream.io", "REST API", "JWT","WebSockets"],
+    gradient: "from-blue-500 to-cyan-500",
+    image: "/images/Frenzy.png",
+    liveUrl: "https://streamify-1-bezq.onrender.com/",
+    gitCode:"https://github.com/Sauravkumarv/Frenzy-A_Social_Platform"
+  },
+  {
     title: "URL Management & Click Analytics",
     description:
       "A full-stack URL shortener app that transforms long URLs into short, shareable links. Built with React for the frontend and Node.js/Express for the backend, it stores URLs and visit history in a database. Users can create, manage, copy short URLs, and view detailed click analytics—all with a clean, interactive interface.",
